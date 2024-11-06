@@ -1,0 +1,23 @@
+def gerar_treino(biotipo, objetivo, nivel, dias_disponiveis, tipo_exercicio):
+    # Exemplo básico para diferentes biotipos e objetivos
+    treino = ""
+    if biotipo == "Ectomorfo" and objetivo == "Ganho de Massa":
+        if dias_disponiveis == 3:
+            treino = "Treino ABC com foco em ganho de massa: A) Peito e Tríceps, B) Costas e Bíceps, C) Pernas e Ombros."
+        elif dias_disponiveis >= 5:
+            treino = "Treino ABCDE para máxima hipertrofia."
+    elif biotipo == "Endomorfo" and objetivo == "Perda de Peso":
+        treino = "Treinos intervalados HIIT + dias de cardio para queima de gordura."
+    return treino
+
+def feedback_treino(dificuldade):
+    if dificuldade == "muito fácil":
+        return "Aumente a carga ou o número de séries."
+    elif dificuldade == "difícil":
+        return "Mantenha por mais duas semanas antes de aumentar."
+    else:
+        return "Nível adequado. Continue assim!"
+
+# Exemplo de execução
+print(gerar_treino("Ectomorfo", "Ganho de Massa", "Intermediário", 3, "Peso Livre"))
+print(feedback_treino("muito fácil"))
